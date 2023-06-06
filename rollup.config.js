@@ -4,10 +4,13 @@ import commonjs from "@rollup/plugin-commonjs";
 import terser from "@rollup/plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
-import css from "rollup-plugin-css-only";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
-import { promises as fs } from "fs";
+import htmlBundle from "rollup-plugin-html-bundle";
+
+import postcss from "rollup-plugin-postcss";
+import cssnano from "cssnano";
+
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -50,8 +53,10 @@ export default {
     }),
     // we'll extract any component CSS out into
     // a separate file - better for performance
-    css({ output: "bundle.css" }),
-
+    postcss({
+      extensions: [".css"],
+      plugins: [cssnano()],
+    }),
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration -
@@ -67,12 +72,11 @@ export default {
       sourceMap: !production,
       inlineSources: !production,
     }),
-    {
-      name: "copy-html",
-      async writeBundle() {
-        await fs.copyFile("ui-app/index.html", "dist/index.html");
-      },
-    },
+    htmlBundle({
+      template: "ui-app/index.html",
+      target: "dist/index.html",
+      inline: true,
+    }),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated
