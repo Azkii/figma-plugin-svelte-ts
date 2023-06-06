@@ -2,11 +2,12 @@
   "name": "svelte-template",
   "version": "1.0.0",
   "description": "Your Figma Plugin",
-  "main": "code.js",
+  "main": "controller.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "watch": "npm run build -- --watch",
-    "test": "rollup -c"
+    "build": "tsc -p tsconfig.json && rollup -c",
+    "watch": "npm run build -- --watch && rollup -c -w",
+    "start": "sirv dist --no-clear",
+    "check": "svelte-check"
   },
   "author": "",
   "license": "",

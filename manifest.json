@@ -9,7 +9,7 @@
     "figma",
     "figjam"
   ],
-  "ui": "dist/ui.html",
+  "ui": "dist/index.html",
   "networkAccess": {
     "allowedDomains": [
       "none"
