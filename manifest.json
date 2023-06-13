@@ -1,18 +1,10 @@
 {
-  "name": "svelte-template",
-  "id": "1247326233687677303",
+  "name": "figma-plugin-svelte-ts",
   "api": "1.0.0",
   "main": "dist/controller.js",
-  "capabilities": [],
-  "enableProposedApi": false,
   "editorType": [
     "figma",
     "figjam"
   ],
-  "ui": "dist/index.html",
-  "networkAccess": {
-    "allowedDomains": [
-      "none"
-    ]
-  }
+  "ui": "dist/index.html"
 }

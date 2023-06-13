@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let name: string;
+  export let name = "Figma";
 </script>
 
 <main>
@@ -7,21 +7,26 @@
 </main>
 
 <style lang="scss">
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
   main {
     text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+    box-sizing: border-box;
 
     h1 {
       color: #ff3e00;
       text-transform: uppercase;
       font-size: 4em;
       font-weight: 100;
-    }
-    @media (max-width: 640px) {
-      max-width: none;
-      background-color: #e8e8e8;
+
+      @media (max-width: 640px) {
+        background-color: #ff3e00;
+        color: whitesmoke;
+      }
     }
   }
 </style>

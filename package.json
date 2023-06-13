@@ -1,11 +1,11 @@
 {
-  "name": "svelte-template",
+  "name": "svelte-figma-ts-template",
   "version": "1.0.0",
-  "description": "Your Figma Plugin",
+  "description": "figma-plugin-svelte-ts",
   "main": "controller.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json && rollup -c",
-    "watch": "npm run build -- --watch && rollup -c -w",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
     "start": "sirv dist --no-clear",
     "check": "svelte-check"
   },
@@ -25,12 +25,13 @@
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svelte": "^7.1.2",
-    "sass": "^1.62.1",
+    "rollup-plugin-svg": "^2.0.0",
+    "sass": "^1.63.3",
     "svelte": "^3.55.0",
     "svelte-check": "^3.0.0",
     "svelte-preprocess": "^5.0.0",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.0"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "sirv-cli": "^2.0.0"
