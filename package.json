@@ -1,39 +1,25 @@
 {
-  "name": "svelte-figma-ts-template",
-  "version": "1.0.0",
-  "description": "figma-plugin-svelte-ts",
-  "main": "controller.js",
+  "name": "1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "start": "sirv dist --no-clear",
-    "check": "svelte-check"
+    "watch": "npm-run-all -p controller-build ui-build web",
+    "web": "vite dev",
+    "ui-build": "vite build --watch",
+    "controller-build": "tsc --watch"
   },
-  "author": "",
-  "license": "",
   "devDependencies": {
-    "@figma/plugin-typings": "*",
-    "@rollup/plugin-commonjs": "^24.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-terser": "^0.4.0",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "@tsconfig/svelte": "^3.0.0",
-    "cssnano": "^6.0.1",
-    "rollup": "^2.78.0",
-    "rollup-plugin-css-only": "^4.3.0",
-    "rollup-plugin-html-bundle": "^0.0.3",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-svelte": "^7.1.2",
-    "rollup-plugin-svg": "^2.0.0",
-    "sass": "^1.63.3",
-    "svelte": "^3.55.0",
-    "svelte-check": "^3.0.0",
-    "svelte-preprocess": "^5.0.0",
-    "tslib": "^2.5.0",
-    "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "sirv-cli": "^2.0.0"
+    "@figma/plugin-typings": "^1.76.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.66.1",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-singlefile": "^0.13.5"
   }
 }

@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "lib": ["es5", "es6", "dom"],
+    "target": "es6",
+    "lib": ["es6"],
+    "outDir": "./dist",
+    "skipLibCheck": true,
     "strict": true,
     "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
-    "outDir": "dist"
+    "noImplicitAny": true
   },
-  "extends": "@tsconfig/svelte/tsconfig.json",
-  "exclude": ["dist"]
+  "include": ["./ui-controller"]
 }
