@@ -2,7 +2,8 @@
 
 ## Introduction
 
-This repository contains the source code for a Figma plugin developed using Svelte and TypeScript. The plugin enhances the Figma experience with its features. Feel free to explore the codebase and contribute to its development.
+This repository serves as a template for kickstarting your own Figma plugin development using Svelte and TypeScript. Use this template as a foundation for building your custom Figma plugin. The structure includes essential configurations and a minimal setup to help you get started quickly.
+Feel free to explore the codebase, customize it according to your needs, and contribute to its enhancement.
 
 ## Getting Started
 
@@ -38,7 +39,3 @@ To get started with the development or testing of this Figma plugin, follow the 
 - `ui-build`: Builds the UI using Vite in watch mode.
 - `controller-build`: Builds the TypeScript controller and minifies it using Terser.
 - `analyze-bundle`: Generates a bundle visualization using Vite Bundle Visualizer.
-
-`Feel free to customize and extend the scripts based on your development needs.`
-
-
